@@ -20,6 +20,10 @@ body {
   font-weight: 200;
   color: $color-white;
   background-color: $color-black;
+
+  @include respond(tab-land) {
+    font-size: 1.3rem;
+  }
 }
 
 button {

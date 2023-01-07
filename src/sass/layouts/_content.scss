@@ -13,6 +13,11 @@
     margin-bottom: 1rem;
   }
 
+  @include respond(tab-land) {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
   &__container {
 
     width: 45rem;

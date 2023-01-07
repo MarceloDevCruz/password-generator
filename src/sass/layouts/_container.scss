@@ -10,4 +10,13 @@
     rgba($color-black, .7)),
   url('../assets/img/background.jpg');
   background-size: cover;
+
+  @include respond(big-desktop) {
+    grid-template-columns: 30vw 70vw;
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: 100%;
+    grid-template-rows: 30vw 60vw 10vw;
+  }
 }
