@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 85vh 15vh;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-black, .7),
+    rgba($color-black, .7)),
+  url('../assets/img/background.jpg');
+  background-size: cover;
+}

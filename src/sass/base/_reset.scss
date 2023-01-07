@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+%weight {
+  font-weight: inherit;
+}
+
+hmtl {
+  font-size: 62,5%;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 200;
+  color: $color-white;
+  background-color: $color-black;
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+a,
+a:link,
+a:visited {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  @extend %weight;
+}
+
+h2 {
+  font-size: 2.2rem;
+  @extend %weight;
+}
+
+h3 {
+  font-size: 2rem;
+  @extend %weight;
+}
+
+h4 {
+  font-size: 1.8rem;
+  @extend %weight;
+}
+
+h5 {
+  font-size: 1.6rem;
+  @extend %weight;
+}
+
+h6 {
+  font-size: 1.3rem;
+  @extend %weight;
+}

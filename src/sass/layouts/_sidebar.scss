@@ -1,0 +1,151 @@
+
+.sidebar {
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  background-color: rgba($color-black-dark, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__numbers {
+    position: absolute;
+    color: $color-pink;
+    font-size: 1.4rem;
+    &-min {
+      top:40%;
+      left: 4%;
+    }
+
+    &-max {
+      top:40%;
+      right: 4%;
+    }
+  }
+
+  &__length {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  &__range {
+
+    appearance: none;
+    outline: 0;
+    height: 1px;
+    background-color: transparent;
+    border-top: 1px solid $color-white;
+    min-width: 18rem;
+    border-radius: 40px;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $color-pink;
+      border-radius: 50%;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1rem;
+    margin: 1rem 0;
+
+  }
+
+  &__label {
+    margin: .5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:first-of-type {
+      text-transform: uppercase;
+    }
+
+  }
+
+  &__checkbox {
+
+    margin-left: 1.5rem;
+    cursor: pointer;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid $color-white;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+
+    &::before {
+      content: '';
+      background: $color-pink;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+      position: absolute;
+      background: transparent;
+      border: 3px solid $color-pink;
+      border-left: 0;
+      border-top: 0;
+      width: 7px;
+      height: 12px;
+      transform: rotate(45deg);
+      top: 2px;
+    }
+
+    &:checked::before {
+      opacity: 1;
+    }
+
+    &:focus {
+      box-shadow: 0 0 px $color-pink;
+    }
+  }
+
+  &__footer {
+
+    grid-column: 1/2;
+    grid-row: 2/-1;
+    background-color: $color-black-dark;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-text {
+      font-size: 1.2rem;
+    }
+  }
+}
