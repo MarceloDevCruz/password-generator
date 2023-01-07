@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 import React, { useContext } from 'react';
 import PasswordContext from '../context/PasswordContext';
 
