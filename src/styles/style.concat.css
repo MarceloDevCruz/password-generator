@@ -17,6 +17,9 @@ body {
   font-weight: 200;
   color: #f1e9e9;
   background-color: #161616; }
+  @media only screen and (max-width: 75em) {
+    body {
+      font-size: 1.3rem; } }
 
 button {
   font-size: inherit;
@@ -82,6 +85,10 @@ h6 {
   .content__title {
     letter-spacing: 2px;
     margin-bottom: 1rem; }
+  @media only screen and (max-width: 75em) {
+    .content {
+      grid-column: 1/-1;
+      grid-row: 2/3; } }
   .content__container {
     width: 45rem;
     height: 25rem;
@@ -113,10 +120,14 @@ h6 {
   grid-column: 2/-1;
   grid-row: 2/-1;
   background-image: linear-gradient(to left top, #161616, #000);
-  height: 15vh;
+  min-height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .footer {
+      grid-column: 1/-1;
+      grid-row: 3 / -1; } }
   .footer__content {
     display: flex;
     flex-direction: column;
@@ -136,8 +147,15 @@ h6 {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative; }
+  justify-content: center; }
+  @media only screen and (max-width: 75em) {
+    .sidebar {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      font-size: 1.2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar {
+      display: none; } }
   .sidebar__container {
     text-align: center; }
   .sidebar__title {
@@ -147,19 +165,36 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    @media only screen and (max-width: 75em) {
+      .sidebar__form {
+        flex-direction: row;
+        position: relative; } }
   .sidebar__numbers {
     position: absolute;
     color: #aa6ab6;
     font-size: 1.4rem; }
     .sidebar__numbers-min {
       top: 40%;
-      left: 4%; }
+      left: -10%; }
+      @media only screen and (max-width: 75em) {
+        .sidebar__numbers-min {
+          top: 80%;
+          left: -3%; } }
     .sidebar__numbers-max {
       top: 40%;
-      right: 2%; }
+      right: -10%; }
+      @media only screen and (max-width: 75em) {
+        .sidebar__numbers-max {
+          top: 80%;
+          right: -3%; } }
   .sidebar__length {
     text-align: center;
     margin: 1rem 0; }
+    @media only screen and (max-width: 75em) {
+      .sidebar__length {
+        position: absolute;
+        top: 10%;
+        left: 12%; } }
   .sidebar__range {
     appearance: none;
     outline: 0;
@@ -178,7 +213,15 @@ h6 {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      min-width: 100%;
+      min-height: 2rem;
+      position: relative; }
+      @media only screen and (max-width: 75em) {
+        .sidebar__range-container {
+          flex-direction: row;
+          min-width: 10rem;
+          margin-right: 3rem; } }
   .sidebar__input-container {
     display: flex;
     flex-direction: column;
@@ -186,6 +229,9 @@ h6 {
     align-items: flex-end;
     padding: 1rem;
     margin: 1rem 0; }
+    @media only screen and (max-width: 75em) {
+      .sidebar__input-container {
+        margin-right: 3rem; } }
   .sidebar__label {
     margin: .5rem 0;
     display: flex;
@@ -232,6 +278,9 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 75em) {
+      .sidebar__footer {
+        display: none; } }
     .sidebar__footer-text {
       font-size: 1.2rem; }
 
@@ -241,3 +290,10 @@ h6 {
   grid-template-rows: 85vh 15vh;
   background-image: linear-gradient(to right bottom, rgba(22, 22, 22, 0.7), rgba(22, 22, 22, 0.7)), url("../assets/img/background.jpg");
   background-size: cover; }
+  @media only screen and (max-width: 112.5em) {
+    .container {
+      grid-template-columns: 30vw 70vw; } }
+  @media only screen and (max-width: 75em) {
+    .container {
+      grid-template-columns: 100%;
+      grid-template-rows: 30vw 60vw 10vw; } }
