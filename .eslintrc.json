@@ -19,5 +19,6 @@
         "react", "html"
     ],
     "rules": {
+      "no-console": "off"
     }
 }

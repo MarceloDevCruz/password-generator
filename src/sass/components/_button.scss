@@ -1,11 +1,14 @@
 .btn {
 
-  width: 13rem;
-  height: 3.2rem;
   background-color: transparent;
-  border: 3px solid $color-pink;
-  border-radius: 15px;
-  font-weight: 400;
-  font-size: 1.3rem;
   text-align: center;
+
+  &-primary {
+    font-weight: 400;
+    font-size: 1.3rem;
+    border: 3px solid $color-pink;
+    border-radius: 15px;
+    width: 13rem;
+    height: 3.2rem;
+  }
 }

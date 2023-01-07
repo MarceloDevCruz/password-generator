@@ -15,30 +15,34 @@
 
   &__container {
 
-    min-width: 45rem;
-    min-height: 25rem;
+    width: 45rem;
+    height: 25rem;
     background-color: rgba($color-black-dark, .8);
     border-radius: 20px;
+    padding: 1rem;
+    position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+
+    &-button {
+      background-color: transparent;
+      position: absolute;
+      top: 2%;
+      right: 2%;
+    }
 
     &-title {
       margin: 1rem;
     }
 
-    &-box {
+    &-password {
+      display: block;
       width: 100%;
       height: 100%;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &-password {
+      word-wrap: break-word;
+      text-align: center;
       color: $color-pink;
       font-weight: 200;
       font-size: 2.5rem;
