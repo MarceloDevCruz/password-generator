@@ -8,15 +8,13 @@
   align-items: center;
   justify-content: center;
 
-
   @include respond(tab-land) {
-    grid-column: 1/2;
-    grid-row: 1/2;
     font-size: 1.2rem;
   }
 
   @include respond(tab-port) {
-    display: none;
+    font-size: .9rem;
+    min-height: 20vh;
   }
 
   &__container {
@@ -26,6 +24,10 @@
   &__title {
     text-align: center;
     margin: 2rem 0;
+
+    @include respond(tab-port) {
+      margin: -.5rem;
+    }
   }
 
   &__form {
@@ -37,6 +39,11 @@
     @include respond(tab-land) {
       flex-direction: row;
       position: relative;
+    }
+
+    @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
     }
 
   }
@@ -53,6 +60,10 @@
         top: 80%;
         left: -3%;
       }
+
+      @include respond(tab-land) {
+        left: -2%;
+      }
     }
 
     &-max {
@@ -62,6 +73,10 @@
       @include respond(tab-land) {
         top: 80%;
         right: -3%;
+      }
+
+      @include respond(tab-land) {
+        right: -2%;
       }
     }
   }
@@ -75,6 +90,10 @@
       top: 10%;
       left: 12%;
     }
+
+    @include respond(tab-port) {
+      left: 8%;
+    }
   }
 
   &__range {
@@ -86,6 +105,10 @@
     border-top: 1px solid $color-white;
     min-width: 18rem;
     border-radius: 40px;
+
+    @include respond(tab-port) {
+      min-width: 10rem;
+    }
 
     &::-webkit-slider-thumb {
       appearance: none;
@@ -110,6 +133,10 @@
         margin-right: 3rem;
       }
 
+      @include respond(tab-port) {
+        grid-column: 1/2;
+      }
+
     }
   }
 
@@ -123,6 +150,12 @@
 
     @include respond(tab-land) {
       margin-right: 3rem;
+    }
+
+    @include respond(tab-port) {
+      margin-right: 0;
+      grid-column: 2/3;
+      margin: 0 1rem;
     }
   }
 
@@ -195,6 +228,13 @@
 
     &-text {
       font-size: 1.2rem;
+    }
+  }
+
+  &__button {
+
+    @include respond(tab-port) {
+
     }
   }
 }

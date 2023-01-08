@@ -83,7 +83,7 @@ function Sidebar() {
                 />
               </label>
             </div>
-            <div className="button-container">
+            <div className="sidebar__button">
               <button className="btn btn-primary" type="submit">
                 Generate
               </button>
