@@ -17,6 +17,10 @@
     min-height: 20vh;
   }
 
+  @include respond(phone) {
+    display: none;
+  }
+
   &__container {
     text-align: center;
   }

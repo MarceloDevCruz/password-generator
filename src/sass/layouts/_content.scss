@@ -7,16 +7,21 @@
   grid-template-rows: 1fr 2fr;
   gap: 2%;
   margin: 0 auto;
+  min-height: 85vh;
 
   @include respond (tab-land) {
     grid-column: 1/-1;
     grid-row: 2/3;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 10% 90%;
   }
 
   @include respond(tab-port) {
     gap: 1%;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 12% 75%;
+  }
+
+  @include respond(phone) {
+    display: block;
   }
 
   &__title {
@@ -28,6 +33,10 @@
     @include respond(tab-port) {
       align-self: flex-end;
       font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      display: none;
     }
   }
 
@@ -52,12 +61,29 @@
       min-height: 10rem;
     }
 
+    @include respond(phone) {
+      display: block;
+      width: 20rem;
+      min-height: 20rem;
+      margin-top: -5rem;
+      text-align: center;
+    }
+
+    @include respond(small-phone) {
+      min-height: 14rem;
+      width: 14rem;
+    }
+
     &-title {
       margin: 1rem;
 
       @include respond(tab-port) {
         margin: .3rem;
         font-size: 2rem;
+      }
+
+      @include respond(small-phone) {
+        font-size: 1.5rem;
       }
     }
 
@@ -73,6 +99,10 @@
 
       @include respond(tab-port) {
         font-size: 1.6rem;
+      }
+
+      @include respond(small-phone) {
+        font-size: 1.2rem;
       }
     }
   }
