@@ -18,7 +18,13 @@
   }
 
   @include respond(phone) {
-    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-black;
+    z-index: 10;
   }
 
   &__container {
@@ -30,7 +36,7 @@
     margin: 2rem 0;
 
     @include respond(tab-port) {
-      margin: -.5rem;
+      display: none;
     }
   }
 
@@ -48,6 +54,12 @@
     @include respond(tab-port) {
       display: grid;
       grid-template-columns: 2fr 2fr 1fr;
+    }
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
   }
@@ -98,6 +110,12 @@
     @include respond(tab-port) {
       left: 8%;
     }
+
+    @include respond(phone) {
+      position: relative;
+      text-align: center;
+      margin: 0;
+    }
   }
 
   &__range {
@@ -139,6 +157,11 @@
 
       @include respond(tab-port) {
         grid-column: 1/2;
+      }
+
+      @include respond(phone) {
+        min-width: 12rem;
+        margin: .5rem 0 1rem;
       }
 
     }
